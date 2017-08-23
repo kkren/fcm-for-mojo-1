@@ -1,7 +1,7 @@
 FROM debian:latest
 EXPOSE 5003 5004 5005
 RUN apt update && apt install -y perl cpanminus build-essential openssl git wget curl ca-certificates python python3 rsync software-properties-common apt-transport-https
-RUN cpanm Mojo:Webqq Getopt::Long
+RUN cpanm Mojo::Webqq Getopt::Long
 
 # From Stack Overflow :P
 # Install Node.js
@@ -19,4 +19,4 @@ ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 # Finish
 
-RUN git clone 
+RUN git clone https://github.com/RikkaW/FCM-For-Mojo.git
