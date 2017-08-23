@@ -1,6 +1,6 @@
 FROM debian:latest
 EXPOSE 5003 5004 5005
-RUN apt update && apt install -y perl cpanminus build-essential openssl git wget curl ca-certificates python python3 rsync software-properties-common apt-transport-https
+RUN apt update && apt install -y perl cpanminus build-essential openssl git wget curl ca-certificates python python3 rsync software-properties-common apt-transport-https libnet-ssleay-perl
 RUN cpanm Mojo::Webqq Getopt::Long
 
 # From Stack Overflow :P
