@@ -21,8 +21,8 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Test
 ADD https://nodejs.org/dist/v8.4.0/node-v8.4.0-linux-x64.tar.gz /usr/local/node-v8.4.0-linux-x64.tar.gz
-RUN tar zxvf /usr/local/node-v8.4.0-linux-x64.tar.gz -C /usr/local/node/
-RUN ln -s /usr/local/node/bin/node /usr/bin/node && ln -s /usr/local/node/bin/npm /usr/bin/npm
+RUN tar zxvf /usr/local/node-v8.4.0-linux-x64.tar.gz -C /usr/local/
+RUN ln -s /usr/local/node-v8.4.0-linux-x64/bin/node /usr/bin/node && ln -s /usr/local/node-v8.4.0-linux-x64/bin/npm /usr/bin/npm
 
 ENV PERL_VERSION 5.24.1
 VOLUME /mnt
