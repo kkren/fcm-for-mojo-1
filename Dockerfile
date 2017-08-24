@@ -23,7 +23,7 @@ ENV PERL_VERSION 5.24.1
 VOLUME /mnt
 WORKDIR /mnt/workdir/
 RUN git clone https://github.com/RikkaW/FCM-For-Mojo.git "/mnt/workdir/FCM-For-Mojo"
-COPY /mnt/workdir/FCM-For-Mojo/server/plugin/FFM.pm /usr/local/share/perl/$PERL_VERSION/Mojo/Webqq/Plugin/
+ADD https://raw.githubusercontent.com/RikkaW/FCM-for-Mojo/master/server/plugin/FFM.pm /usr/local/share/perl/$PERL_VERSION/Mojo/Webqq/Plugin/FFM.pm
 WORKDIR /mnt/workdir/FCM-For-Mojo/server/node/
 RUN npm install http-auth http-proxy
 WORKDIR /mnt/workdir/FCM-For-Mojo/server/
