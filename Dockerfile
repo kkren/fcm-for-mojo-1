@@ -19,11 +19,13 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | b
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
 
+ENV PERL_VERSION 5.24.1
 USER prprrikka
+VOLUME /mnt
 WORKDIR /mnt/workdir/
 RUN git clone https://github.com/RikkaW/FCM-For-Mojo.git
 USER root
-COPY /mnt/workdir/FCM-For-Mojo/server/plugin/FFM.pm /usr/local/share/perl/5.24.1/Mojo/Webqq/Plugin/
+COPY /mnt/workdir/FCM-For-Mojo/server/plugin/FFM.pm /usr/local/share/perl/$PERL_VERSION/Mojo/Webqq/Plugin/
 USER prprrikka
 WORKDIR /mnt/workdir/FCM-For-Mojo/server/node/
 RUN npm install http-auth http-proxy
