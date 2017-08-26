@@ -2,7 +2,7 @@
 Dockerfile for [FCM For Mojo](https://github.com/RikkaW/FCM-For-Mojo) Server.
 
 ## Quick Start
-#### Install Docker and curl:
+### Install Docker and curl:
 
 For CentOS/Fedora
 
@@ -18,7 +18,7 @@ sudo apt-get install curl -y
 curl -o- https://get.docker.com/ | bash
 ```
 
-#### Get Dockerfile of FCM for Mojo:
+### Get Dockerfile of FCM for Mojo:
 
 ```
 docker pull kotomeinyan/fcm-for-mojo
