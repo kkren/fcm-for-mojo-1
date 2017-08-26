@@ -11,10 +11,10 @@ ADD https://nodejs.org/dist/v8.4.0/node-v8.4.0-linux-x64.tar.gz /usr/local/node-
 RUN tar zxvf /usr/local/node-v8.4.0-linux-x64.tar.gz -C /usr/local/
 RUN ln -s /usr/local/node-v8.4.0-linux-x64/bin/node /usr/bin/node && ln -s /usr/local/node-v8.4.0-linux-x64/bin/npm /usr/bin/npm
 ENV PERL_VERSION 5.24.1
-ADD https://raw.githubusercontent.com/RikkaW/FCM-for-Mojo/master/server/plugin/FFM.pm /usr/local/share/perl/$PERL_VERSION/Mojo/Webqq/Plugin/FFM.pm
+ADD https://raw.githubusercontent.com/sjdy521/Mojo-Webqq/master/lib/Mojo/Webqq/Plugin/FFM.pm /usr/local/share/perl/$PERL_VERSION/Mojo/Webqq/Plugin/FFM.pm
 
 RUN git clone https://github.com/RikkaW/FCM-For-Mojo.git "/mnt/workdir/FCM-For-Mojo"
 WORKDIR /mnt/workdir/FCM-For-Mojo/server/node/
-RUN npm install http-auth http-proxy
+RUN npm install
 WORKDIR /mnt/workdir/FCM-For-Mojo/server
 CMD ["node", "node/index.js"]
