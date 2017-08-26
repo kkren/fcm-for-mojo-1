@@ -29,7 +29,7 @@ docker run -d kotomeinyan/fcm-for-mojo
 **Please make sure The port 5005 has been opened on the firewall**
 
 ## 入门
-## 安装 Docker 和 curl
+### 安装 Docker 和 curl
 
 CentOS/Fedora
 
